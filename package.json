@@ -1,0 +1,16 @@
+{
+  "name": "linux_helper_cli",
+  "version": "1.0.0",
+  "description": "A node cli tool to help linux users with system information ",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "Damilare Emmanuel <d.dammylarry@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@adonisjs/ace": "^5.0.8"
+  }
+}
