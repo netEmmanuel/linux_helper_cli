@@ -2,15 +2,20 @@ const { Command } = require("@adonisjs/ace");
 
 class Hello extends Command {
   static get signature() {
-    return "Hello";
+    return ` hello 
+    { name?=User: enter your name }
+    { -f , --friendly: say a friendly greeting}
+    { -g , --hostile: say a hostile greeting :( }`;
   }
 
   static get description() {
-    return "Hello User";
+    return "Say Hello to guest or personal name";
   }
 
-  async handle() {
-    console.log(`Hello User`);
+  async handle({ name }, { friendly, hostile }) {
+    console.log(
+      `Hello ${friendly ? "friendly " : ""} ${name} ${hostile ? ":(" : ""}`
+    );
   }
 }
 
